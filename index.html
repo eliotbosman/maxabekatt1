@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABEK ATT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Animation libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">ABEKATT</a></div>
+        <div class="nav-links">
+            <a href="grid.html" class="index-link">INDEX</a>
+            <a href="#" class="info-trigger">INFO</a>
+            <a href="#" class="manifesto-trigger">MANIFESTO</a>
+            <a href="#" class="cart-trigger">CART (0)</a>
+        </div>
+    </nav>
+    <!-- Main product gallery -->
+    <div class="horizontal-gallery">
+        <div class="gallery-container"></div>
+    </div>
+
+    <!-- Product overlay -->
+    <div class="product-overlay overlay">
+        <div class="product-content">
+            <div class="product-image-container">
+                <img class="product-image" src="" alt="">
+            </div>
+            <div class="product-details">
+                <div class="product-info-top">
+                    <h2 class="product-title"></h2>
+                    <p class="product-price"></p>
+                    <div class="product-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                </div>
+                <div class="product-info-bottom">
+                    <div class="product-quantity">
+                        <label for="quantity">Quantity:</label>
+                        <select id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart overlay -->
+    <div class="cart-overlay overlay">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+            </div>
+            <div class="cart-items">
+                <!-- Placeholder item as per sketch -->
+                <div class="cart-item">
+                    <div class="cart-item-image"></div>
+                    <div class="cart-item-details">
+                        <h3>Product Title</h3>
+                        <p class="cart-item-price">€299</p>
+                        <div class="cart-item-quantity">
+                            <span>Quantity: 1</span>
+                        </div>
+                        <button class="remove-item">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Total: €299</div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info overlay -->
+    <div class="info-overlay overlay">
+        <div class="info-content">
+            <div class="info-header">
+                <h2>Shipping Information</h2>
+            </div>
+            <div class="info-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, vitae aliquam nunc nunc vitae nunc.</p>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manifesto overlay -->
+    <div class="manifesto-overlay overlay">
+        <div class="manifesto-content">
+            <h2 class="manifesto-title">ELEMENTAL MANIFESTO</h2>
+            <div class="pentagram-container">
+                <div class="pentagram">
+                    <div class="pentagram-line" id="line-1"></div>
+                    <div class="pentagram-line" id="line-2"></div>
+                    <div class="pentagram-line" id="line-3"></div>
+                    <div class="pentagram-line" id="line-4"></div>
+                    <div class="pentagram-line" id="line-5"></div>
+                    
+                    <div class="element-point" id="point-1">
+                        <div class="element-number">01</div>
+                        <div class="element-text">WET</div>
+                    </div>
+                    <div class="element-point" id="point-2">
+                        <div class="element-number">02</div>
+                        <div class="element-text">HOT</div>
+                    </div>
+                    <div class="element-point" id="point-3">
+                        <div class="element-number">03</div>
+                        <div class="element-text">DRY</div>
+                    </div>
+                    <div class="element-point" id="point-4">
+                        <div class="element-number">04</div>
+                        <div class="element-text">COLD</div>
+                    </div>
+                    <div class="element-point" id="point-5">
+                        <div class="element-number">05</div>
+                        <div class="element-text">SOUL</div>
+                    </div>
+                </div>
+            </div>
+            <div class="manifesto-text">
+                <p>I love the wet, hot, dry and cold. The Manifesto embodies the unique qualities and diverse phases of glass, metal, and ceramics as materials. Every object carries within it a fifth dimension - Soul, representing the soul of creation and the bond that connects both humans and objects.</p>
+            </div>
+        </div>
+    </div>
+<!-- Marquee Footer -->
+<footer class="marquee-footer">
+    <div class="marquee-content">
+        <div class="marquee-text">I love the wet, hot, dry and cold. The Manifesto embodies the unique qualities and diverse phases of glass, metal, and ceramics as materials. Every object carries within it a fifth dimension - Soul, representing the soul of creation and the bond that connects both humans and objects.</div>
+        <div class="marquee-text">I love the wet, hot, dry and cold. The Manifesto embodies the unique qualities and diverse phases of glass, metal, and ceramics as materials. Every object carries within it a fifth dimension - Soul, representing the soul of creation and the bond that connects both humans and objects.</div>
+    </div>
+</footer>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
